@@ -22,7 +22,7 @@ public class FormSafeListener implements ActionListener{
 		if(tf.forenameInput.getText() != null){
 			TargetData FN = new TargetData(tf.forenameInput.getText(), "FN");
 			dataList.add(FN);
-			System.out.println("lol");
+			System.out.println(dataList.get(dataList.indexOf(FN)).getData());
 		}
 		
 		if(tf.nameInput.getText() != null){
