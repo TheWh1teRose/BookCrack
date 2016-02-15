@@ -19,14 +19,19 @@ public class FormSafeListener implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		TargetData FN = new TargetData(tf.forenameInput.getText(), "FN");
-		dataList.add(FN);
+		if(tf.forenameInput.getText() != null){
+			TargetData FN = new TargetData(tf.forenameInput.getText(), "FN");
+			dataList.add(FN);
+			System.out.println("lol");
+		}
 		
-		TargetData NA = new TargetData(tf.nameInput.getText(), "NA");
-		dataList.add(NA);
+		if(tf.nameInput.getText() != null){
+			TargetData NA = new TargetData(tf.nameInput.getText(), "NA");
+			dataList.add(NA);
+			System.out.println(dataList.get(dataList.indexOf(NA)).getData());
+		}
 		
-		System.out.println(dataList.get(dataList.indexOf(FN)).getData());
-		System.out.println(dataList.get(dataList.indexOf(NA)).getData());
+		
 		
 	}
 
